@@ -8,7 +8,7 @@ final class Bootstrap
             'driverpdo' => 'pdo_mysql',
             'user' => 'root',
             'password' => '',
-            'dbname' => 'benchmark',
+            'dbname' => 'employees',
         ],
         'cache' => TRUE,
         'limit' => 500,

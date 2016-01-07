@@ -47,7 +47,7 @@ after_success:
     - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - chmod 600 ~/.ssh/id_rsa
 
-    - git clone -q -b logs git@github.com:minetro/db-benchmark-logs.git git-logs
+    - git clone -b logs git@github.com:f3l1x/dbals-benchmark.git git-logs
 
     - NOW=$(date +"%Y%m%d")
     - FILE=git-logs/logs/${NOW}.log

@@ -22,7 +22,7 @@ final class Bootstrap
     public static function check($dir)
     {
         if (@!include $dir . '/vendor/autoload.php') {
-            echo 'Install library using `installall` for all or manually `composer install` for every library';
+            echo "Install library using `installall` for all or manually `composer install` for every library\n";
             exit(1);
         }
     }

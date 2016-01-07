@@ -1,0 +1,76 @@
+language: php
+php:
+    - 5.4
+    - 5.5
+    - 5.6
+    - 7
+    - hhvm
+    - hhvm-nightly
+
+matrix:
+    allow_failures:
+        - php: 7
+        - php: hhvm-nightly
+
+before_script:
+    # Update composer
+    - composer self-update
+
+    # Install all dependecies
+    - sh installall
+
+    # Download Employees Sample Database
+    - wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2
+
+    # Extract data
+    - tar -xjf employees_db-full-1.0.6.tar.bz2
+
+    # MySQL name timezone
+    - mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+
+    # Import to MySQL
+    - cd employees_db
+    - mysql -t < employees.sql
+    - cd ../
+
+script:
+    - echo -e "First run (create cache files)" >> first.log
+    - sh testall >> first.log
+    - cat first.log
+
+    - echo "Second run (using cache)" >> second.log
+    - sh testall >> second.log
+    - cat second.log
+
+after_success:
+    - php -r "echo base64_decode('${GH_PRIVATEKEY_b64}');" > ~/.ssh/id_rsa
+    - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+    - chmod 600 ~/.ssh/id_rsa
+
+    - git clone -q -b logs git@github.com:minetro/db-benchmark-logs.git git-logs
+
+
+    - NOW=$(date +"%Y%m%d")
+    - FILE=git-logs/logs/${NOW}.log
+
+    - sh info.sh >> ${FILE}
+    - cat first.log >> ${FILE}
+    - echo -e "\n" >> ${FILE}
+    - cat second.log >> ${FILE}
+    - echo -e "\n\n" >> ${FILE}
+
+    - cd git-logs
+
+    - git config --global user.name "${GH_USER_NAME}"
+    - git config --global user.email "${GH_USER_EMAIL}"
+
+    - git add logs/*.log
+    - git commit -q -m "Update ${now} (PHP ${TRAVIS_PHP_VERSION}) [JOB ${TRAVIS_JOB_NUMBER}]"
+
+    - git push -q --all
+
+sudo: false
+
+cache:
+    directories:
+        - $HOME/.composer/cache

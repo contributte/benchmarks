@@ -1,0 +1,11 @@
+{
+  "require": {
+    "php": ">= 5.4",
+    "tharos/leanmapper": "~2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Model\\": "model/"
+    }
+  }
+}

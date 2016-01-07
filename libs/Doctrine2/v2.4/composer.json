@@ -1,0 +1,11 @@
+{
+  "require": {
+    "php": ">= 5.4",
+    "doctrine/orm": "~2.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Model\\": "model/"
+    }
+  }
+}

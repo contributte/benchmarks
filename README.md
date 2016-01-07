@@ -36,3 +36,17 @@ Idea by [@tharos](https://github.com/dg/db) (http://forum.nette.org/cs/viewtopic
 - Run `composer -d import install` - it installs dependencies for import script
 - Run `php import/import.php` - it imports all needed SQL code
 - Run `testall` or reach library individually `php run-employees.php`
+
+## Employees Sample Database
+
+### Download
+
+a) Download over HTTP (https://launchpad.net/test-db/employees-db-1/1.0.6/)
+
+b) Download over Github, [branch data](https://github.com/f3l1x/dbals-benchmark/tree/data).
+
+### Import
+
+a) By yourself
+
+b) Over simple [import tool](https://github.com/f3l1x/dbals-benchmark/tree/import)

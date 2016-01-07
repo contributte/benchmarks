@@ -17,7 +17,7 @@ before_script:
     - composer self-update
 
     # Install all dependecies
-    - sh installall
+    - sh scripts/install.sh
 
     # Download Employees Sample Database
     - wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2
@@ -35,11 +35,11 @@ before_script:
 
 script:
     - echo -e "First run (create cache files)" >> first.log
-    - sh testall >> first.log
+    - sh scripts/benchmark.sh >> first.log
     - cat first.log
 
-    - echo "Second run (using cache)" >> second.log
-    - sh testall >> second.log
+    - echo "Second run (use cache)" >> second.log
+    - sh scripts/benchmark.sh >> second.log
     - cat second.log
 
 after_success:
@@ -49,11 +49,10 @@ after_success:
 
     - git clone -q -b logs git@github.com:minetro/db-benchmark-logs.git git-logs
 
-
     - NOW=$(date +"%Y%m%d")
     - FILE=git-logs/logs/${NOW}.log
 
-    - sh info.sh >> ${FILE}
+    - sh scripts/info.sh >> ${FILE}
     - cat first.log >> ${FILE}
     - echo -e "\n" >> ${FILE}
     - cat second.log >> ${FILE}

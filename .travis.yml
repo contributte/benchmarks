@@ -69,8 +69,6 @@ after_success:
 
     - git push -q --all
 
-sudo: false
-
 cache:
     directories:
         - $HOME/.composer/cache

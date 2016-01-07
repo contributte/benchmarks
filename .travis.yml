@@ -67,7 +67,3 @@ after_success:
     - git commit -q -m "Update ${now} (PHP ${TRAVIS_PHP_VERSION}) [JOB ${TRAVIS_JOB_NUMBER}]"
 
     - git push -q --all
-
-cache:
-    directories:
-        - $HOME/.composer/cache

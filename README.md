@@ -11,9 +11,9 @@ The task is:
 
 ## Thanks to
 
-Forked from @dg (https://github.com/dg/db-benchmark), thank you.
+Forked from [@dg](https://github.com/dg) (https://github.com/dg/db-benchmark).
 
-Idea by @tharos (http://forum.nette.org/cs/viewtopic.php?pid=106521#p106521), thank you.
+Idea by [@tharos](https://github.com/dg/db) (http://forum.nette.org/cs/viewtopic.php?pid=106521#p106521).
 
 ## Libraries
 

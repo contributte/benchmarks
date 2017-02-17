@@ -8,6 +8,7 @@ use Nette\Database\Structure;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
+Bootstrap::php('>=', '5.6.0');
 Bootstrap::init();
 Bootstrap::check(__DIR__);
 
@@ -43,4 +44,4 @@ foreach ($context->table('employees')->limit(Bootstrap::$config['limit']) as $em
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('NetteDatabase', '^2.4.0', $startTime, $endTime);
+Bootstrap::result('NetteDatabase', '~2.4.0', $startTime, $endTime);

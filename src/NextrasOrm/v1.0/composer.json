@@ -1,7 +1,7 @@
 {
   "require": {
     "php": ">=5.4",
-    "nextras/orm": "^1.1.0"
+    "nextras/orm": "~1.1.0"
   },
   "autoload": {
     "psr-4": {

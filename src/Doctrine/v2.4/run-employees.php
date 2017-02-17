@@ -72,4 +72,4 @@ foreach ($paginator->getIterator() as $employee) {
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('Doctrine2', '^2.4.0', $startTime, $endTime);
+Bootstrap::result('Doctrine2', '~2.4.0', $startTime, $endTime);

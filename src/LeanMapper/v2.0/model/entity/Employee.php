@@ -16,4 +16,5 @@ use DateTime;
  */
 class Employee extends \LeanMapper\Entity
 {
+
 }

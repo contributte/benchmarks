@@ -13,4 +13,5 @@ use Nextras\Orm\Entity\Entity;
  */
 class Salary extends Entity
 {
+
 }

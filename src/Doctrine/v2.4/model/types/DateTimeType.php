@@ -2,16 +2,16 @@
 
 namespace Model\Types;
 
-use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
-use Doctrine\DBAL\Types\DateTimeType as DoctrineDateTimeType;
 use DateTime;
+use Doctrine\DBAL\Platforms\AbstractPlatform;
+use Doctrine\DBAL\Types\DateTimeType as DoctrineDateTimeType;
 
 /**
  * @author Michael Moravec
  */
 class DateTimeType extends DoctrineDateTimeType
 {
+
 	public function convertToPHPValue($value, AbstractPlatform $platform)
 	{
 		if ($value === NULL) {

@@ -8,4 +8,5 @@ namespace Model\Entity;
  */
 class Department extends \LeanMapper\Entity
 {
+
 }

@@ -2,7 +2,6 @@
 
 namespace Model\Repository;
 
-use DibiConnection;
 use Model\Entity\Employee;
 
 /**

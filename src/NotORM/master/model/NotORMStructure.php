@@ -18,6 +18,7 @@ class NotORMStructure extends NotORM_Structure_Convention
 		if ($table === 'departments') {
 			return 'dept_no';
 		}
+
 		return parent::getPrimary($table);
 	}
 
@@ -29,6 +30,7 @@ class NotORMStructure extends NotORM_Structure_Convention
 		if ($table === 'employees' and $name === 'dept_emp') {
 			return 'emp_no';
 		}
+
 		return parent::getReferencingColumn($name, $table);
 	}
 
@@ -37,6 +39,7 @@ class NotORMStructure extends NotORM_Structure_Convention
 		if ($table === 'dept_emp' and $name === 'departments') {
 			return 'dept_no';
 		}
+
 		return parent::getReferencedColumn($name, $table);
 	}
 

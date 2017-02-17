@@ -15,9 +15,9 @@ Bootstrap::check(__DIR__);
 $cacheStorage = Bootstrap::$config['cache'] ? new FileStorage(__DIR__ . '/temp') : NULL;
 
 $connection = new Connection(
-    Bootstrap::$config['db']['driver'] . ':dbname=' . Bootstrap::$config['db']['dbname'],
-    Bootstrap::$config['db']['user'],
-    Bootstrap::$config['db']['password']
+	Bootstrap::$config['db']['driver'] . ':dbname=' . Bootstrap::$config['db']['dbname'],
+	Bootstrap::$config['db']['user'],
+	Bootstrap::$config['db']['password']
 );
 
 $structure = new Structure($connection, $cacheStorage);
@@ -29,17 +29,17 @@ ob_start();
 $employees = new EmployeeRepository($context);
 
 foreach ($employees->findAll()->limit(Bootstrap::$config['limit']) as $employee) {
-    echo $employee->getFirstName(), ' ', $employee->getLastName(), ' (', $employee->getEmpNo(), ")\n";
+	echo $employee->getFirstName(), ' ', $employee->getLastName(), ' (', $employee->getEmpNo(), ")\n";
 
-    echo 'Salaries:', "\n";
-    foreach ($employee->getSalaries() as $salary) {
-        echo $salary->getSalary(), "\n";
-    }
+	echo 'Salaries:', "\n";
+	foreach ($employee->getSalaries() as $salary) {
+		echo $salary->getSalary(), "\n";
+	}
 
-    echo 'Departments:', "\n";
-    foreach ($employee->getDepartments() as $department) {
-        echo $department->getName(), "\n";
-    }
+	echo 'Departments:', "\n";
+	foreach ($employee->getDepartments() as $department) {
+		echo $department->getName(), "\n";
+	}
 }
 
 ob_end_clean();

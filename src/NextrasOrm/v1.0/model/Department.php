@@ -12,4 +12,5 @@ use Nextras\Orm\Relationships\ManyHasMany;
  */
 class Department extends Entity
 {
+
 }

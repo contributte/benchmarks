@@ -9,20 +9,21 @@ use Nextras\Orm\Mapper\Mapper;
 class EmployeesMapper extends Mapper
 {
 
-    protected function createStorageReflection()
-    {
-        $reflection = parent::createStorageReflection();
-        $reflection->addMapping('id', 'emp_no');
-        return $reflection;
-    }
+	protected function createStorageReflection()
+	{
+		$reflection = parent::createStorageReflection();
+		$reflection->addMapping('id', 'emp_no');
 
-    public function getManyHasManyParameters(PropertyMetadata $sourceProperty, IMapper $targetMapper)
-    {
-        if ($targetMapper instanceof DepartmentsMapper) {
-            return ['dept_emp', ['emp_no', 'dept_no']];
-        }
+		return $reflection;
+	}
 
-        return parent::getManyHasManyParameters($sourceProperty, $$targetMapper);
-    }
+	public function getManyHasManyParameters(PropertyMetadata $sourceProperty, IMapper $targetMapper)
+	{
+		if ($targetMapper instanceof DepartmentsMapper) {
+			return ['dept_emp', ['emp_no', 'dept_no']];
+		}
+
+		return parent::getManyHasManyParameters($sourceProperty, $$targetMapper);
+	}
 
 }

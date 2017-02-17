@@ -13,16 +13,10 @@ matrix:
         - php: hhvm-nightly
 
 before_script:
-    # Update composer
-    - composer self-update
-
-    # Install all dependecies
-    - sh scripts/install.sh
-
     # Download Employees Sample Database
-    - if [ ! -f "downloads/employees_db-full-1.0.6.tar.bz2" ]; then \
-      mkdir downloads && \
-      wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2 \
+    - if [ ! -f "downloads/employees_db-full-1.0.6.tar.bz2" ]; then
+      mkdir -p downloads &&
+      wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2 -O downloads/employees_db-full-1.0.6.tar.bz2;
       fi;
 
     # Extract data
@@ -32,9 +26,15 @@ before_script:
     - mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
 
     # Import to MySQL
-    - cd employees_db
+    - cd employees_db/
     - mysql -t < employees.sql
     - cd ../
+
+    # Update composer
+    - composer self-update
+
+    # Install all dependecies
+    - sh scripts/install.sh
 
 script:
     - echo -e "First run (create cache files)" >> first.log
@@ -74,3 +74,4 @@ after_success:
 cache:
   directories:
   - downloads/
+  - employees_db/

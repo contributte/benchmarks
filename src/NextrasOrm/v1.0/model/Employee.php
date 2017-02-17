@@ -16,4 +16,5 @@ use Nextras\Orm\Entity\Entity;
  */
 class Employee extends Entity
 {
+
 }

@@ -18,16 +18,16 @@ Bootstrap::check(__DIR__);
 $cacheStorage = Bootstrap::$config['cache'] ? new FileStorage(__DIR__ . '/temp') : NULL;
 
 $connection = new Connection([
-    'driver' => Bootstrap::$config['db']['driver'] . 'i',
-    'username' => Bootstrap::$config['db']['user'],
-    'password' => Bootstrap::$config['db']['password'],
-    'dbname' => Bootstrap::$config['db']['dbname'],
+	'driver' => Bootstrap::$config['db']['driver'] . 'i',
+	'username' => Bootstrap::$config['db']['user'],
+	'password' => Bootstrap::$config['db']['password'],
+	'dbname' => Bootstrap::$config['db']['dbname'],
 ]);
 
 $staticLoader = new SimpleModelFactory($cacheStorage, [
-    'employees' => new EmployeesRepository(new EmployeesMapper($connection, $cacheStorage)),
-    'salarieys' => new SalariesRepository(new SalariesMapper($connection, $cacheStorage)),
-    'departments' => new DepartmentsRepository(new DepartmentsMapper($connection, $cacheStorage)),
+	'employees' => new EmployeesRepository(new EmployeesMapper($connection, $cacheStorage)),
+	'salarieys' => new SalariesRepository(new SalariesMapper($connection, $cacheStorage)),
+	'departments' => new DepartmentsRepository(new DepartmentsMapper($connection, $cacheStorage)),
 ]);
 
 
@@ -38,17 +38,17 @@ $model = $staticLoader->create();
 $employees = $model->employees->findOverview(Bootstrap::$config['limit']);
 
 foreach ($employees as $employee) {
-    echo "$employee->firstName $employee->lastName ($employee->id)\n";
+	echo "$employee->firstName $employee->lastName ($employee->id)\n";
 
-    echo "Salaries:\n";
-    foreach ($employee->salaries as $salary) {
-        echo $salary->salary, "\n";
-    }
+	echo "Salaries:\n";
+	foreach ($employee->salaries as $salary) {
+		echo $salary->salary, "\n";
+	}
 
-    echo "Departments:\n";
-    foreach ($employee->departments as $department) {
-        echo $department->name, "\n";
-    }
+	echo "Departments:\n";
+	foreach ($employee->departments as $department) {
+		echo $department->name, "\n";
+	}
 }
 
 ob_end_clean();

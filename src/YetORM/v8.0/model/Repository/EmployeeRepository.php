@@ -3,7 +3,6 @@
 namespace Model\Repository;
 
 use YetORM;
-use Model\Entity;
 
 
 /**
@@ -11,4 +10,6 @@ use Model\Entity;
  * @entity Entity\Employee
  */
 class EmployeeRepository extends YetORM\Repository
-{}
+{
+
+}

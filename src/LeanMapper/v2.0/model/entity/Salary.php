@@ -12,4 +12,5 @@ use DateTime;
  */
 class Salary extends \LeanMapper\Entity
 {
+
 }

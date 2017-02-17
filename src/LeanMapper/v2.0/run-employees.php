@@ -38,4 +38,4 @@ foreach ($employeesRepository->findAll(Bootstrap::$config['limit']) as $employee
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('LeanMapper', '^2.2.0', $startTime, $endTime);
+Bootstrap::result('LeanMapper', '~2.2.0', $startTime, $endTime);

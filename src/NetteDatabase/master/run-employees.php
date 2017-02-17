@@ -8,7 +8,7 @@ use Nette\Database\Structure;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-Bootstrap::php('>=', '7.0.0');
+Bootstrap::php('NetteDatabase (dev-master)', '>=', '7.0.0');
 Bootstrap::init();
 Bootstrap::check(__DIR__);
 

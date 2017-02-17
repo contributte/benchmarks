@@ -2,14 +2,15 @@
 
 namespace Model\Repository;
 
-use YetORM;
-
+use YetORM\Repository;
 
 /**
  * @table employees
- * @entity Entity\Employee
  */
-class EmployeeRepository extends YetORM\Repository
+class EmployeeRepository extends Repository
 {
+
+	/** @var string */
+	protected $entity = 'Model\Entity\Employee';
 
 }

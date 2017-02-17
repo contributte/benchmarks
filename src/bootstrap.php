@@ -39,14 +39,14 @@ final class Bootstrap
 
 	public static function skip($reason, $code = 255)
 	{
-		echo sprintf("Skip:%s\n", $reason);
+		echo sprintf("Skip: %s\n", $reason);
 		die($code);
 	}
 
-	public static function php($operator, $version)
+	public static function php($library, $operator, $version)
 	{
 		if (version_compare(PHP_VERSION, $version, $operator) !== TRUE) {
-			self::skip(sprintf('This library needs %s%s, current version is %s.', $operator, $version, PHP_VERSION));
+			self::skip(sprintf('%s needs %s%s, current version is %s.', $library, $operator, $version, PHP_VERSION));
 		}
 	}
 

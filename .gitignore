@@ -4,6 +4,3 @@
 # Composer
 composer.lock
 vendor
-
-# Benchmark
-temp

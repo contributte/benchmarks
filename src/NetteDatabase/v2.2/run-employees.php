@@ -44,4 +44,4 @@ foreach ($dao->table('employees')->limit(Bootstrap::$config['limit']) as $employ
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('NetteDatabase', '~2.2.0', $startTime, $endTime);
+Bootstrap::result('NetteDatabase', '^2.2.0', $startTime, $endTime);

@@ -10,11 +10,11 @@ require_once __DIR__ . '/../../bootstrap.php';
 Bootstrap::init();
 Bootstrap::check(__DIR__);
 
-$connection = new Connection(array(
+$connection = new Connection([
     'username' => Bootstrap::$config['db']['user'],
     'password' => Bootstrap::$config['db']['password'],
     'database' => Bootstrap::$config['db']['dbname'],
-));
+]);
 
 $startTime = -microtime(TRUE);
 ob_start();
@@ -38,4 +38,4 @@ foreach ($employeesRepository->findAll(Bootstrap::$config['limit']) as $employee
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('LeanMapper', '~2.0', $startTime, $endTime);
+Bootstrap::result('LeanMapper', '^2.2.0', $startTime, $endTime);

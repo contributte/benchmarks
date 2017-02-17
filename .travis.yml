@@ -20,10 +20,13 @@ before_script:
     - sh scripts/install.sh
 
     # Download Employees Sample Database
-    - wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2
+    - if [ ! -f "downloads/employees_db-full-1.0.6.tar.bz2" ]; then \\
+      mkdir downloads && \
+      wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2 && \
+      fi;
 
     # Extract data
-    - tar -xjf employees_db-full-1.0.6.tar.bz2
+    - tar -xjf downloads/employees_db-full-1.0.6.tar.bz2
 
     # MySQL name timezone
     - mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
@@ -67,3 +70,7 @@ after_success:
     - git commit -q -m "Update ${now} (PHP ${TRAVIS_PHP_VERSION}) [JOB ${TRAVIS_JOB_NUMBER}]"
 
     - git push -q --all
+
+cache:
+  directories:
+  - downloads/

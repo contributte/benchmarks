@@ -1,6 +1,6 @@
 {
   "require": {
     "php": ">= 5.4",
-    "nette/nette": "~2.0.0"
+    "nette/nette": "^2.0.0"
   }
 }

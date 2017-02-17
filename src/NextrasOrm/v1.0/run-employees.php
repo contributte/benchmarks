@@ -54,4 +54,4 @@ foreach ($employees as $employee) {
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('Nextras\Orm', '~1.0', $startTime, $endTime);
+Bootstrap::result('Nextras\Orm', '^1.0.0', $startTime, $endTime);

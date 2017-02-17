@@ -2,13 +2,16 @@
 
 use Nette\Caching\Storages\FileStorage;
 use Nette\Database\Connection;
-use Nette\Database\Reflection\DiscoveredReflection;
+use Nette\Database\Context;
+use Nette\Database\Conventions\DiscoveredConventions;
+use Nette\Database\Structure;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-Bootstrap::php('<', '7.0.0');
 Bootstrap::init();
 Bootstrap::check(__DIR__);
+
+$cacheStorage = Bootstrap::$config['cache'] ? new FileStorage(__DIR__ . '/temp') : NULL;
 
 $connection = new Connection(
     Bootstrap::$config['db']['driver'] . ':dbname=' . Bootstrap::$config['db']['dbname'],
@@ -16,15 +19,14 @@ $connection = new Connection(
     Bootstrap::$config['db']['password']
 );
 
-$cacheStorage = Bootstrap::$config['cache'] ? new FileStorage(__DIR__ . '/temp') : NULL;
-$connection->setCacheStorage($cacheStorage);
-$connection->setDatabaseReflection(new DiscoveredReflection($cacheStorage));
-$dao = $connection;
+$structure = new Structure($connection, $cacheStorage);
+$conventions = new DiscoveredConventions($structure);
+$context = new Context($connection, $structure, $conventions, $cacheStorage);
 
 $startTime = -microtime(TRUE);
 ob_start();
 
-foreach ($dao->table('employees')->limit(Bootstrap::$config['limit']) as $employe) {
+foreach ($context->table('employees')->limit(Bootstrap::$config['limit']) as $employe) {
     echo "$employe->first_name $employe->last_name ($employe->emp_no)\n";
 
     echo "Salaries:\n";
@@ -41,4 +43,4 @@ foreach ($dao->table('employees')->limit(Bootstrap::$config['limit']) as $employ
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('NetteDatabase', '^2.0.0', $startTime, $endTime);
+Bootstrap::result('NetteDatabase', '^2.4.0', $startTime, $endTime);

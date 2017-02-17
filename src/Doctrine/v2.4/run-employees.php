@@ -1,12 +1,10 @@
 <?php
 
 use Doctrine\Common\Cache\FilesystemCache;
-use Doctrine\Common\Version;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\ORM\Tools\Setup;
-use Model\Entities\Employee;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
@@ -17,7 +15,7 @@ $cache = Bootstrap::$config['cache'] ? new FilesystemCache(__DIR__ . '/temp') : 
 $config = Setup::createAnnotationMetadataConfiguration(
     [__DIR__ . '/model/entities'],
     TRUE,
-    __DIR__ . '/model/entities/proxies',
+    __DIR__ . '/temp/proxies',
     $cache,
     FALSE
 );
@@ -31,11 +29,11 @@ Type::overrideType(Type::DATE, 'Model\Types\DateType');
 Type::overrideType(Type::DATETIME, 'Model\Types\DateTimeType');
 
 $em = EntityManager::create([
-        'driver' => Bootstrap::$config['db']['driverpdo'],
-        'user' => Bootstrap::$config['db']['user'],
-        'password' => Bootstrap::$config['db']['password'],
-        'dbname' => Bootstrap::$config['db']['dbname'],
-    ],
+    'driver' => Bootstrap::$config['db']['driverpdo'],
+    'user' => Bootstrap::$config['db']['user'],
+    'password' => Bootstrap::$config['db']['password'],
+    'dbname' => Bootstrap::$config['db']['dbname'],
+],
     $config
 );
 
@@ -74,4 +72,4 @@ foreach ($paginator->getIterator() as $employee) {
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('Doctrine2', '~2.4.0', $startTime, $endTime);
+Bootstrap::result('Doctrine2', '^2.4.0', $startTime, $endTime);

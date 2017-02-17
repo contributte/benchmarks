@@ -4,7 +4,6 @@ use Nette\Caching\Storages\FileStorage;
 use Nette\Database\Connection;
 use Nette\Database\Context;
 use Nette\Database\Reflection\DiscoveredReflection;
-use Nette\Framework;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
@@ -45,4 +44,4 @@ foreach ($dao->table('employees')->limit(Bootstrap::$config['limit']) as $employ
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('NetteDatabase', '~2.1.0', $startTime, $endTime);
+Bootstrap::result('NetteDatabase', '^2.1.0', $startTime, $endTime);

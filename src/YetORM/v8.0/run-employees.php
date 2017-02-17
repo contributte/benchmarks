@@ -45,4 +45,4 @@ foreach ($employees->findAll()->limit(Bootstrap::$config['limit']) as $employee)
 ob_end_clean();
 $endTime = microtime(TRUE);
 
-Bootstrap::result('YetORM', '~8.0', $startTime, $endTime);
+Bootstrap::result('YetORM', '^8.0.0', $startTime, $endTime);

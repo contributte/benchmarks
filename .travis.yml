@@ -1,75 +1,75 @@
 language: php
+
+sudo: false
+
 php:
-    - 5.4
-    - 5.5
-    - 5.6
-    - 7
-    - hhvm
-    - hhvm-nightly
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - 7.1
 
 matrix:
-    allow_failures:
-        - php: 7
-        - php: hhvm-nightly
+  fast_finish: true
 
 before_script:
-    # Download Employees Sample Database
-    - if [ ! -f "downloads/employees_db-full-1.0.6.tar.bz2" ]; then
-      mkdir -p downloads &&
-      wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2 -O downloads/employees_db-full-1.0.6.tar.bz2;
-      fi;
+  # Download Employees Sample Database
+  - if [ ! -f "downloads/employees_db-full-1.0.6.tar.bz2" ]; then
+    mkdir -p downloads &&
+    wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2 -O downloads/employees_db-full-1.0.6.tar.bz2;
+    fi;
 
-    # Extract data
-    - tar -xjf downloads/employees_db-full-1.0.6.tar.bz2
+  # Extract data
+  - tar -xjf downloads/employees_db-full-1.0.6.tar.bz2
 
-    # MySQL name timezone
-    - mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+  # MySQL name timezone
+  - mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
 
-    # Import to MySQL
-    - cd employees_db/
-    - mysql -t < employees.sql
-    - cd ../
+  # Import to MySQL
+  - cd employees_db/
+  - mysql -t < employees.sql
+  - cd ../
 
-    # Update composer
-    - composer self-update
+  # Update composer
+  - composer self-update
 
-    # Install all dependecies
-    - sh scripts/install.sh
+  # Install all dependecies
+  - sh scripts/install.sh
 
 script:
-    - echo -e "First run (create cache files)" >> first.log
-    - sh scripts/benchmark.sh >> first.log
-    - cat first.log
+  - echo -e "First run (create cache files)" >> first.log
+  - sh scripts/benchmark.sh >> first.log
+  - cat first.log
 
-    - echo "Second run (use cache)" >> second.log
-    - sh scripts/benchmark.sh >> second.log
-    - cat second.log
+  - echo "Second run (use cache)" >> second.log
+  - sh scripts/benchmark.sh >> second.log
+  - cat second.log
 
 after_success:
-    - php -r "echo base64_decode('${GH_PRIVATEKEY_b64}');" > ~/.ssh/id_rsa
-    - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-    - chmod 600 ~/.ssh/id_rsa
+  - php -r "echo base64_decode('${GH_PRIVATEKEY_b64}');" > ~/.ssh/id_rsa
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+  - chmod 600 ~/.ssh/id_rsa
 
-    - git clone -b logs git@github.com:f3l1x/dbals-benchmark.git git-logs
+  - git clone -b logs git@github.com:f3l1x/dbals-benchmark.git git-logs
 
-    - NOW=$(date +"%Y%m%d")
-    - FILE=git-logs/logs/${NOW}.log
+  - NOW=$(date +"%Y%m%d")
+  - FILE=git-logs/logs/${NOW}.log
 
-    - sh scripts/info.sh >> ${FILE}
-    - cat first.log >> ${FILE}
-    - echo -e "\n" >> ${FILE}
-    - cat second.log >> ${FILE}
-    - echo -e "\n\n" >> ${FILE}
+  - sh scripts/info.sh >> ${FILE}
+  - cat first.log >> ${FILE}
+  - echo -e "\n" >> ${FILE}
+  - cat second.log >> ${FILE}
+  - echo -e "\n\n" >> ${FILE}
 
-    - cd git-logs
+  - cd git-logs
 
-    - git config --global user.name "${GH_USER_NAME}"
-    - git config --global user.email "${GH_USER_EMAIL}"
+  - git config --global user.name "${GH_USER_NAME}"
+  - git config --global user.email "${GH_USER_EMAIL}"
 
-    - git add logs/*.log
-    - git commit -q -m "Update ${now} (PHP ${TRAVIS_PHP_VERSION}) [JOB ${TRAVIS_JOB_NUMBER}]"
+  - git add logs/*.log
+  - git commit -q -m "Update ${now} (PHP ${TRAVIS_PHP_VERSION}) [JOB ${TRAVIS_JOB_NUMBER}]"
 
-    - git push -q --all
+  - git push -q --all
 
 cache:
   directories:

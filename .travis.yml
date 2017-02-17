@@ -20,9 +20,9 @@ before_script:
     - sh scripts/install.sh
 
     # Download Employees Sample Database
-    - if [ ! -f "downloads/employees_db-full-1.0.6.tar.bz2" ]; then \\
+    - if [ ! -f "downloads/employees_db-full-1.0.6.tar.bz2" ]; then \
       mkdir downloads && \
-      wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2 && \
+      wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2 \
       fi;
 
     # Extract data

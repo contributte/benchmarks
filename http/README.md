@@ -1,4 +1,4 @@
-# HTTP BENCHMARK
+# HTTP benchmarks
 
 Compare webservers, php frameworks, process managers and extensions.
 
@@ -10,28 +10,28 @@ Here is a list of all tested solutions.
 
 **Webservers**
 
-- Apache
-- Caddy
-- Nginx
-- Nginx Unit
+- [Apache](https://apache.org/)
+- [Caddy](https://caddyserver.com/)
+- [Nginx](https://nginx.com/)
+- [Nginx Unit](https://unit.nginx.org/)
 
 **Frameworks**
 
-- Amphp
-- PHP server
-- ReactPHP
-- Workerman
+- [Amphp](https://amphp.org/)
+- [PHP server](https://www.php.net/manual/en/features.commandline.webserver.php)
+- [ReactPHP](https://reactphp.org/)
+- [Workerman](https://www.workerman.net/)
 
 **Process managers**
 
-- PHP-PM
-- Roadrunner
+- [PHP-PM](https://github.com/php-pm/php-pm)
+- [Roadrunner](https://roadrunner.dev/)
 
 **Extensions**
 
-- Swoole
-- Openswoole
-- Swow
+- [Swoole](https://www.swoole.com/)
+- [Openswoole](https://openswoole.com/)
+- [Swow](https://github.com/swow/swow)
 
 ## Requirements
 

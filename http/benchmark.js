@@ -108,7 +108,7 @@ let LOGGER = {
 			// Close docker container
 			container?.kill();
 
-			LOGGER.log(`[${testapp}] FINISH`);
+			LOGGER.log(`FINISH`);
 			LOGGER.delimiter();
 		}
 	}
@@ -142,7 +142,6 @@ function runContainer(app) {
 		});
 	});
 }
-
 
 function runBenchmark({ concurrent, requests }) {
 	return new Promise((resolve, reject) => {

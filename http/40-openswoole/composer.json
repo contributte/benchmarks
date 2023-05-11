@@ -1,0 +1,5 @@
+{
+  "require": {
+    "openswoole/ide-helper": "^22.0.1"
+  }
+}

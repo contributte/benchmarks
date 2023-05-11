@@ -1,0 +1,964 @@
+{
+    "apache": [
+        {
+            "app": "apache",
+            "rps": 3164.197,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 1409.233,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 1423.211,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 7969.664,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 8229.862,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 8139.083,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 14704.524,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 15369.657,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 11861.164,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 2594.638,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 2936.639,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "apache",
+            "rps": 2937.613,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "caddy": [
+        {
+            "app": "caddy",
+            "rps": 952.872,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 884.239,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 1362.719,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 7829.723,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 7964.266,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 7940.662,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 17081.961,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 17317.573,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 17592.103,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 15618.161,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 17009.227,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "caddy",
+            "rps": 11959.711,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "nginx": [
+        {
+            "app": "nginx",
+            "rps": 1381.642,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 1662.151,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 1641.797,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 9209.883,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 9276.931,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 9214.768,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 21427.59,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 19284.9,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 20943.695,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 15005.884,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 16293.244,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "nginx",
+            "rps": 3013.803,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "unit": [
+        {
+            "app": "unit",
+            "rps": 1555.919,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 1969.419,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 1968.066,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 9951.614,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 10174.783,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 10163.843,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 19454.259,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 22350.445,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 19593.246,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 21465.425,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 13669.131,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "unit",
+            "rps": 19293.614,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "amphp": [
+        {
+            "app": "amphp",
+            "rps": 1733.201,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 2213.363,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 2224.795,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 10111.551,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 10031.699,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 10295.589,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 8661.836,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 8847.045,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 8657.316,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 2977.525,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 3252.025,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "amphp",
+            "rps": 3260.737,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "php-server": [
+        {
+            "app": "php-server",
+            "rps": 346.268,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 375.574,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 919.271,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 407.79,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 437.771,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 874.154,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 401.288,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 893.345,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 428.007,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 515.434,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 805.866,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "php-server",
+            "rps": 800.336,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "reactphp": [
+        {
+            "app": "reactphp",
+            "rps": 579.585,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 2055.623,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 2121.975,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 9331.551,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 10273.043,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 10189.755,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 17606.934,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 15619.599,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 16402.956,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 17738.292,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 15918.55,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "reactphp",
+            "rps": 14279.922,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "workerman": [
+        {
+            "app": "workerman",
+            "rps": 1928.182,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 2388.692,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 2417.735,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 11904.595,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 11873.341,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 11853.457,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 29805.389,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 33749.744,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 31402.104,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 21274.874,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 14313.751,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "workerman",
+            "rps": 3018.384,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "php-pm": [
+        {
+            "app": "php-pm",
+            "rps": 713.441,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 348.956,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 444.532,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 794.301,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 431.951,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 790.063,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 428.163,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 454.194,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 721.361,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 487.024,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 654.712,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "php-pm",
+            "rps": 1051.039,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "roadrunner": [
+        {
+            "app": "roadrunner",
+            "rps": 1006.526,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 1759.654,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 1686.45,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 10855.527,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 8204.503,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 9436.624,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 33611.901,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 29062.477,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 29230.194,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 23555.191,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 19723,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "roadrunner",
+            "rps": 19732.689,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "openswoole": [
+        {
+            "app": "openswoole",
+            "rps": 1424.079,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 1713.092,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 1710.764,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 10302.735,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 10302.687,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 10257.92,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 32119.257,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 32694.033,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 36348.243,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 20083.951,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 21445.335,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "openswoole",
+            "rps": 2758.756,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "swoole": [
+        {
+            "app": "swoole",
+            "rps": 1695.402,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 2216.198,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 2192.727,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 11571.625,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 11790.609,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 11538.829,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 19686.065,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 25596.636,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 29090.451,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 21274.717,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 18625.619,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "swoole",
+            "rps": 2771.026,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ],
+    "swow": [
+        {
+            "app": "swow",
+            "rps": 1667.311,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 2135.378,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 2010.9,
+            "concurrent": 1,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 11053.085,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 11040.914,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 11092.921,
+            "concurrent": 10,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 23187.254,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 21025.938,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 25634.779,
+            "concurrent": 100,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 19320.949,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 13936.191,
+            "concurrent": 1000,
+            "requests": 10000
+        },
+        {
+            "app": "swow",
+            "rps": 17425.683,
+            "concurrent": 1000,
+            "requests": 10000
+        }
+    ]
+}

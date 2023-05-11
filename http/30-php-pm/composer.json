@@ -1,0 +1,8 @@
+{
+  "require": {
+    "php-pm/php-pm": "^2.4.0"
+  },
+  "autoload": {
+    "classmap": ["index.php"]
+  }
+}

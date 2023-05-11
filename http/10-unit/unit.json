@@ -1,0 +1,43 @@
+{
+  "listeners": {
+    "*:8000": {
+      "pass": "routes"
+    }
+  },
+  "routes": [
+    {
+      "action": {
+        "share": "/srv/www$uri",
+        "fallback": {
+          "pass": "applications/app"
+        }
+      }
+    }
+  ],
+  "applications": {
+    "app": {
+      "type": "php",
+      "root": "/srv/",
+      "script": "index.php",
+      "options": {
+        "admin": {
+          "memory_limit": "256M",
+          "upload_max_filesize": "20M",
+          "post_max_size": "20M",
+          "max_execution_time": "300",
+          "max_input_time": "300",
+          "date.timezone": "Europe/Prague"
+        }
+      }
+    }
+  },
+  "access_log": {
+    "path": "/var/log/unit.log"
+  },
+  "settings": {
+    "http": {
+      "body_read_timeout": 300,
+      "max_body_size": 536870912
+    }
+  }
+}

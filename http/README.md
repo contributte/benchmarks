@@ -56,7 +56,7 @@ Here is a list of all tested solutions.
 
 **Benchmarking (manual)**
 
-- Spin docker via `make run-[name]` e.q. `make run-nginx`, `make run/roadrunner`.
+- Spin docker via `make run-[name]` e.q. `make run-nginx`, `make run-roadrunner`.
 - Run benchmark using [hey](https://github.com/rakyll/hey) via `make test-hey`.
 - Run benchmark using [wrk](https://github.com/wg/wrk) via `make test-wrk`.
 - Run benchmark using [plow](https://github.com/six-ddc/plow) via `make test-plow`.

@@ -1,0 +1,3 @@
+# Latte benchmarks
+
+- [Embedded](embedded)

@@ -1,4 +1,4 @@
-# DBAL(s) BENCHMARK
+# DBAL(s) benchmarks
 
 Database libraries benchmark based on Employees Sample Database
 

@@ -34,6 +34,15 @@ class LatteBench
 	 * @Revs(1000)
 	 * @Warmup(1)
 	 */
+	public function benchButton1000x(): void
+	{
+		$this->test->testTemplate(__DIR__ . '/../templates/button-1000x.latte');
+	}
+
+	/**
+	 * @Revs(1000)
+	 * @Warmup(1)
+	 */
 	public function benchButtonMacro1x(): void
 	{
 		$this->test->testTemplate(__DIR__ . '/../templates/button-macro-1x.latte');
@@ -46,6 +55,15 @@ class LatteBench
 	public function benchButtonMacro100x(): void
 	{
 		$this->test->testTemplate(__DIR__ . '/../templates/button-macro-100x.latte');
+	}
+
+	/**
+	 * @Revs(1000)
+	 * @Warmup(1)
+	 */
+	public function benchButtonMacro1000x(): void
+	{
+		$this->test->testTemplate(__DIR__ . '/../templates/button-macro-1000x.latte');
 	}
 
 	/**

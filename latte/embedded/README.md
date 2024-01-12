@@ -5,7 +5,7 @@
 1. Install dependencies via `composer install`.
 2. Run `./benchmark.sh` to run benchmark without opcache.
 3. Run `OPCACHE=1 ./benchmark.sh` to run benchmark with opcache.
-4. Run `./benchmark-all.sh 1` to run all benchmarks.
+4. Run `./benchmark-all.sh` to run all benchmarks.
 
 ## Results
 

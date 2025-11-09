@@ -19,10 +19,16 @@ Idea by [@tharos](https://github.com/dg/db) (http://forum.nette.org/cs/viewtopic
 
 ### ORM
 
+- CycleORM [~1.0, ~2.0]
 - Doctrine2 [~2.4]
 - LeanMapper [~2.0]
 - NextrasOrm [~1.0]
 - YetORM [~8.0]
+
+### DBAL (Database Abstraction Layer)
+
+- Dibi [~3.0, ~4.0, ~5.0]
+- NextrasDbal [~3.0, ~4.0, ~5.0]
 
 ### ActiveRecord
 

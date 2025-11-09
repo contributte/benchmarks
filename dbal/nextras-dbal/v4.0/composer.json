@@ -1,0 +1,6 @@
+{
+	"require": {
+		"php": ">= 7.4",
+		"nextras/dbal": "^4.0"
+	}
+}
